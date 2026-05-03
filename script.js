@@ -1,22 +1,29 @@
 // script.js
-const form = document.getElementById('orderForm');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  // Basic validation
-  const name = form.name.value.trim();
-  const phone = form.phone.value.trim();
 
-  if (!name || !phone) {
-    alert('Por favor llena nombre y teléfono.');
-    return;
+// Scroll to contact form when "Haz tu pedido" or "Pedir ahora" buttons clicked
+document.addEventListener("DOMContentLoaded", function () {
+  const orderHeroBtn = document.getElementById("order-hero-btn");
+  const orderProductBtn = document.getElementById("order-product-btn");
+  const contactSection = document.getElementById("contact");
+
+  function scrollToContact() {
+    contactSection.scrollIntoView({ behavior: "smooth" });
   }
 
-  // Compose message
-  const message = encodeURIComponent(
-    `Hola, mi nombre es ${name}. Me gustaría hacer un pedido o consulta: ${form.message.value.trim()}`
-  );
-  const phoneNumber = '994928993'; // Change if necessary
+  orderHeroBtn.addEventListener("click", scrollToContact);
+  orderProductBtn.addEventListener("click", scrollToContact);
 
-  const url = `https://wa.me/${phoneNumber}?text=${message}`;
-  window.open(url, '_blank');
+  // Simple form validation before submit (for demonstration)
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", function (e) {
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      alert("Por favor, completa todos los campos correctamente.");
+      return;
+    }
+    // Normally here one would submit or handle form data
+    e.preventDefault();
+    alert("¡Mensaje enviado! Gracias por contactarnos.");
+    form.reset();
+  });
 });
