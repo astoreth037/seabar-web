@@ -4,124 +4,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SEA BAR - Energía del mar</title>
+  <title>SEA BAR</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  
+  <!-- Hero Section -->
+  <header class="hero">
+    <nav class="nav">
+      <!-- Logo oficial de SEA BAR -->
+      <img src="WhatsApp Image 2025-09-13 at 12.28.37_407fa001.jpg" alt="Logo oficial SEA BAR" class="logo-img" />
+      <a href="https://wa.me/994928993" target="_blank" rel="noopener" class="nav-whatsapp-btn" aria-label="WhatsApp SEA BAR">WhatsApp</a>
+    </nav>
+    <div class="hero-content">
+      <h1>SEA BAR</h1>
+      <h2>Energía del mar</h2>
+      <p>Energy bars made from marine algae (Ulva)</p>
+      <button class="btn" id="order-hero-btn" aria-label="Haz tu pedido">Haz tu pedido</button>
+    </div>
+    <!-- Organic wave shape -->
+    <svg class="hero-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#F2EFE6" d="M0,40 C360,100 1080,0 1440,60 L1440,120 L0,120 Z"></path>
+    </svg>
+  </header>
 
-<header class="hero" id="hero">
-  <nav class="nav">
-    <!-- Replace with actual logo -->
-    <div class="logo" aria-label="SEA BAR Logo">SEA BAR</div>
-  </nav>
-  <div class="hero-content container">
-    <h1>SEA BAR</h1>
-    <h2>Energía del mar</h2>
-    <p>Energy bars made from marine algae (Ulva)</p>
-    <a href="#contact" class="btn">Haz tu pedido</a>
-  </div>
-  <svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
-    <path fill="#F2EFE6" d="M0,80 C360,120 1080,30 1440,80 L1440,100 L0,100 Z"></path>
-  </svg>
-</header>
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h3>¿Qué es Ulva?</h3>
+    <p>
+      Ulva es un alga marina conocida como “lechuga de mar”, rica en nutrientes y beneficios para la salud, sostenible y natural.
+    </p>
+    <ul class="benefits">
+      <li><strong>Natural y sostenible</strong></li>
+      <li><strong>Rica en nutrientes</strong></li>
+      <li><strong>Energía basada en el mar</strong></li>
+    </ul>
+  </section>
 
-<section class="about container" id="about">
-  <h3>¿Qué es Ulva?</h3>
-  <p class="about-text">
-    La Ulva es un alga marina rica en nutrientes que proporciona energía natural y sostenible para tu día a día.
-  </p>
-  <ul class="benefits">
-    <li>🌿 Natural y sostenible</li>
-    <li>💪 Rica en nutrientes</li>
-    <li>🌊 Energía basada en el mar</li>
-  </ul>
-</section>
+  <!-- Product Section -->
+  <section class="product" id="product">
+    <!-- Imagen oficial del producto - barra energética con topping de almendra -->
+    <img src="20250906_133204.jpg" alt="Barra energética SEA BAR con almendras" class="product-image" />
+    <div class="product-info">
+      <p>Barra energética 100% natural elaborada a base de Ulva, perfecta para impulsar tu día con energía marina.</p>
+      <p class="price">S/12.90</p>
+      <button class="btn" id="order-product-btn" aria-label="Pedir ahora">Pedir ahora</button>
+    </div>
+  </section>
 
-<section class="product container" id="product">
-  <h3>Nuestro Producto</h3>
-  <!-- Replace src below with actual product image -->
-  <img class="product-img" src="https://via.placeholder.com/320x180?text=Producto" alt="Barrita energética SEA BAR" />
-  <p class="product-desc">
-    Barra energética a base de Ulva, deliciosa y nutritiva para darte la energía que necesitas.
-  </p>
-  <p class="product-price">Precio: S/ 4.50 c/u</p>
-  <a href="https://wa.me/994928993" target="_blank" rel="noopener" class="btn">Pedir ahora</a>
-</section>
-
-<section class="social container" id="social">
-  <h3>Prueba Social</h3>
-  <div class="social-cards">
-
-    <div class="card testimonial">
+  <!-- Social Proof Section -->
+  <section class="social-proof" id="social-proof">
+    <h3>Social Proof</h3>
+    <div class="testimonials">
       <h4>Testimonios</h4>
-      <blockquote>“Me encanta SEA BAR, me da energía durante el trabajo sin sentirme pesado.” – Ana P.</blockquote>
-      <blockquote>“Producto natural que cumple con lo que promete, sostenible y sabroso.” – Luis M.</blockquote>
+      <blockquote>"¡Me encanta SEA BAR! Energía natural que realmente se siente." - Ana P.</blockquote>
+      <blockquote>"Perfecto para mis días activos, saludable y delicioso." - Carlos M.</blockquote>
     </div>
-
-    <div class="card influencers">
+    <div class="influencers">
       <h4>Influencers</h4>
-      <ul>
-        <li><a href="https://instagram.com/influencer1" target="_blank" rel="noopener">@influencer1</a></li>
-        <li><a href="https://instagram.com/influencer2" target="_blank" rel="noopener">@influencer2</a></li>
-        <li><a href="https://instagram.com/influencer3" target="_blank" rel="noopener">@influencer3</a></li>
-      </ul>
+      <p>@green_life, @energywave, @mar_natural</p>
     </div>
-
-    <div class="card events">
-      <h4>Ferias</h4>
-      <ul>
-        <li>Feria UTEC 2025</li>
-        <li>Expo Sostenible Lima 2025</li>
-        <li>Evento Startup Peru 2025</li>
-      </ul>
+    <div class="events">
+      <h4>Eventos</h4>
+      <p>Presente en ferias de alimentos saludables y bienestar en Lima y Cusco.</p>
+      <!-- Imagen del evento promocional oficial -->
+      <img src="Captura de pantalla 2025-09-11 171718.png" alt="Evento SEA BAR en UTEC" class="event-image" />
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <h3>Galería</h3>
+    <div class="image-grid">
+      <!-- Imágenes propias con contenido real de SEA BAR -->
+      <img src="20250914_133431.jpg" alt="Barras energéticas preparadas SEA BAR" />
+      <img src="20250906_133204.jpg" alt="Barra energética con topping de almendra SEA BAR" />
+      <img src="WhatsApp Image 2025-09-13 at 12.28.37_407fa001.jpg" alt="Material base - alga verde Ulva SEA BAR" />
+      <img src="Captura de pantalla 2025-09-11 171718.png" alt="Promoción y packaging SEA BAR" />
+      <!-- Imagen generada para ilustrar energía marina -->
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80" alt="Olas del mar al amanecer" />
+      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=300&q=80" alt="Cuerpos de agua verde y plantas marinas" />
+    </div>
+  </section>
 
-<section class="gallery container" id="gallery">
-  <h3>Galería</h3>
-  <div class="gallery-grid">
-    <!-- Replace src with actual gallery images -->
-    <img src="https://via.placeholder.com/150?text=Producto" alt="Imagen producto 1" />
-    <img src="https://via.placeholder.com/150?text=Feria" alt="Imagen feria 1" />
-    <img src="https://via.placeholder.com/150?text=Equipo" alt="Imagen equipo" />
-    <img src="https://via.placeholder.com/150?text=Producto" alt="Imagen producto 2" />
-    <img src="https://via.placeholder.com/150?text=Feria" alt="Imagen feria 2" />
-    <img src="https://via.placeholder.com/150?text=Equipo" alt="Imagen equipo 2" />
-  </div>
-</section>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h3>Contacto</h3>
+    <form id="contact-form" novalidate>
+      <label for="name">Nombre</label>
+      <input type="text" id="" name="name" required placeholder="Tu nombre" />
+      <label for="phone">Teléfono</label>
+      <input type="tel" id="phone" name="phone" required placeholder="Tu teléfono" pattern="[0-9\s+-]{6,}" />
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <div class="contact-links">
+      <a href="https://wa.me/994928993" target="_blank" rel="noopener" class="btn whatsapp-btn" aria-label="WhatsApp SEA BAR">WhatsApp</a>
+      <a href="https://instagram.com/seabar" target="_blank" rel="noopener" class="btn instagram-btn" aria-label="Instagram SEA BAR">Instagram</a>
+    </div>
+  </section>
 
-<section class="contact container" id="contact">
-  <h3>Contacto y Pedido</h3>
-  <form id="orderForm" novalidate>
-    <label for="name">Nombre:</label>
-    <input id="name" name="name" type="text" required placeholder="Tu nombre" />
-
-    <label for="phone">Teléfono:</label>
-    <input id="phone" name="phone" type="tel" required placeholder="Número de contacto" pattern="[\d\s+()-]{7,}" />
-
-    <label for="message">Mensaje:</label>
-    <textarea id="message" name="message" rows="3" placeholder="Tu pedido o consulta"></textarea>
-
-    <button type="submit" class="btn">Enviar</button>
-  </form>
-  <div class="contact-extra">
-    <a href="https://wa.me/994928993" class="btn whatsapp" target="_blank" rel="noopener" aria-label="Whatsapp SEA BAR">
-      WhatsApp
-    </a>
-    <a href="https://instagram.com/sea.nics" class="instagram-link" target="_blank" rel="noopener" aria-label="Instagram SEA BAR">
-      Instagram
-    </a>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 SEA BAR. Energía del mar.</p>
-</footer>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
+
