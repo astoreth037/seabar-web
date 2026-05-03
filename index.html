@@ -1,110 +1,543 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SEA BAR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEA BAR — Energía del Mar</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <nav class="nav">
-      <!-- Logo oficial de SEA BAR -->
-      <img src="WhatsApp Image 2025-09-13 at 12.28.37_407fa001.jpg" alt="Logo oficial SEA BAR" class="logo-img" />
-      <a href="https://wa.me/994928993" target="_blank" rel="noopener" class="nav-whatsapp-btn" aria-label="WhatsApp SEA BAR">WhatsApp</a>
-    </nav>
-    <div class="hero-content">
-      <h1>SEA BAR</h1>
-      <h2>Energía del mar</h2>
-      <p>Energy bars made from marine algae (Ulva)</p>
-      <button class="btn" id="order-hero-btn" aria-label="Haz tu pedido">Haz tu pedido</button>
-    </div>
-    <!-- Organic wave shape -->
-    <svg class="hero-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
-      <path fill="#F2EFE6" d="M0,40 C360,100 1080,0 1440,60 L1440,120 L0,120 Z"></path>
-    </svg>
-  </header>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <h3>¿Qué es Ulva?</h3>
-    <p>
-      Ulva es un alga marina conocida como “lechuga de mar”, rica en nutrientes y beneficios para la salud, sostenible y natural.
-    </p>
-    <ul class="benefits">
-      <li><strong>Natural y sostenible</strong></li>
-      <li><strong>Rica en nutrientes</strong></li>
-      <li><strong>Energía basada en el mar</strong></li>
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">SEA BAR</a>
+    <button class="nav__burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#ulva">Ulva</a></li>
+      <li><a href="#producto">Producto</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#eventos">Eventos</a></li>
+      <li><a href="#galeria">Galería</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="https://wa.me/51994928993" target="_blank" class="nav__cta">Pedir ahora</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <!-- Product Section -->
-  <section class="product" id="product">
-    <!-- Imagen oficial del producto - barra energética con topping de almendra -->
-    <img src="20250906_133204.jpg" alt="Barra energética SEA BAR con almendras" class="product-image" />
-    <div class="product-info">
-      <p>Barra energética 100% natural elaborada a base de Ulva, perfecta para impulsar tu día con energía marina.</p>
-      <p class="price">S/12.90</p>
-      <button class="btn" id="order-product-btn" aria-label="Pedir ahora">Pedir ahora</button>
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg-shape"></div>
+    <div class="hero__content">
+      <span class="hero__tag">Desde el Océano Pacífico</span>
+      <h1 class="hero__title">SEA<br /><em>BAR</em></h1>
+      <p class="hero__subtitle">Energía del mar</p>
+      <p class="hero__desc">Barritas energéticas a base de Ulva 🌿<br />Nutrición natural desde las profundidades del mar</p>
+      <a href="https://wa.me/51994928993?text=Hola,%20quiero%20pedir%20mis%20SEA%20BARs!" target="_blank" class="btn btn--primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pide por WhatsApp
+      </a>
     </div>
-  </section>
-
-  <!-- Social Proof Section -->
-  <section class="social-proof" id="social-proof">
-    <h3>Social Proof</h3>
-    <div class="testimonials">
-      <h4>Testimonios</h4>
-      <blockquote>"¡Me encanta SEA BAR! Energía natural que realmente se siente." - Ana P.</blockquote>
-      <blockquote>"Perfecto para mis días activos, saludable y delicioso." - Carlos M.</blockquote>
+    <div class="hero__image-wrap">
+      <!-- REEMPLAZA esta imagen con la foto real del producto -->
+      <div class="hero__image-placeholder">
+        <div class="placeholder-inner">
+          <span class="placeholder-icon">🌊</span>
+          <p>Foto del producto</p>
+          <small>Reemplazar con imagen real</small>
+        </div>
+      </div>
+      <div class="hero__float hero__float--1">Rico en hierro</div>
+      <div class="hero__float hero__float--2">100% natural</div>
+      <div class="hero__float hero__float--3">S/ 4.50</div>
     </div>
-    <div class="influencers">
-      <h4>Influencers</h4>
-      <p>@green_life, @energywave, @mar_natural</p>
-    </div>
-    <div class="events">
-      <h4>Eventos</h4>
-      <p>Presente en ferias de alimentos saludables y bienestar en Lima y Cusco.</p>
-      <!-- Imagen del evento promocional oficial -->
-      <img src="Captura de pantalla 2025-09-11 171718.png" alt="Evento SEA BAR en UTEC" class="event-image" />
-    </div>
-  </section>
-
-  <!-- Gallery Section -->
-  <section class="gallery" id="gallery">
-    <h3>Galería</h3>
-    <div class="image-grid">
-      <!-- Imágenes propias con contenido real de SEA BAR -->
-      <img src="20250914_133431.jpg" alt="Barras energéticas preparadas SEA BAR" />
-      <img src="20250906_133204.jpg" alt="Barra energética con topping de almendra SEA BAR" />
-      <img src="WhatsApp Image 2025-09-13 at 12.28.37_407fa001.jpg" alt="Material base - alga verde Ulva SEA BAR" />
-      <img src="Captura de pantalla 2025-09-11 171718.png" alt="Promoción y packaging SEA BAR" />
-      <!-- Imagen generada para ilustrar energía marina -->
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=300&q=80" alt="Olas del mar al amanecer" />
-      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=300&q=80" alt="Cuerpos de agua verde y plantas marinas" />
+    <div class="hero__scroll">
+      <span>Desliza</span>
+      <div class="hero__scroll-line"></div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h3>Contacto</h3>
-    <form id="contact-form" novalidate>
-      <label for="name">Nombre</label>
-      <input type="text" id="" name="name" required placeholder="Tu nombre" />
-      <label for="phone">Teléfono</label>
-      <input type="tel" id="phone" name="phone" required placeholder="Tu teléfono" pattern="[0-9\s+-]{6,}" />
-      <label for="message">Mensaje</label>
-      <textarea id="message" name="message" required placeholder="Tu mensaje"></textarea>
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-    <div class="contact-links">
-      <a href="https://wa.me/994928993" target="_blank" rel="noopener" class="btn whatsapp-btn" aria-label="WhatsApp SEA BAR">WhatsApp</a>
-      <a href="https://instagram.com/seabar" target="_blank" rel="noopener" class="btn instagram-btn" aria-label="Instagram SEA BAR">Instagram</a>
+  <!-- ===================== ABOUT ULVA ===================== -->
+  <section class="ulva" id="ulva">
+    <div class="container">
+      <div class="ulva__header">
+        <span class="section-tag">El Ingrediente</span>
+        <h2 class="section-title">¿Qué es la <em>Ulva</em>?</h2>
+        <p class="ulva__intro">La Ulva, conocida como "lechuga de mar", es un alga verde que crece en las costas del Pacífico peruano. Cultivada de forma sostenible, es uno de los superalimentos más completos del océano.</p>
+      </div>
+      <div class="ulva__benefits">
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🌿</div>
+          <h3>Natural y Sostenible</h3>
+          <p>Cultivada sin pesticidas ni químicos, directamente del mar peruano. Un alimento que cuida el planeta mientras te cuida a ti.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">💎</div>
+          <h3>Rica en Nutrientes</h3>
+          <p>Alto contenido de hierro, calcio, vitaminas A, B y C, proteínas y fibra. La naturaleza concentró lo mejor del océano en cada hoja.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">⚡</div>
+          <h3>Energía Marina</h3>
+          <p>Sus carbohidratos complejos liberan energía de forma sostenida. El combustible natural que tu cuerpo necesita para rendir todo el día.</p>
+        </div>
+      </div>
+      <div class="ulva__stats">
+        <div class="stat">
+          <span class="stat__num">3x</span>
+          <span class="stat__label">más hierro que la espinaca</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">100%</span>
+          <span class="stat__label">origen marino peruano</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">0</span>
+          <span class="stat__label">conservantes artificiales</span>
+        </div>
+      </div>
+    </div>
+    <div class="ulva__wave"></div>
+  </section>
+
+  <!-- ===================== PRODUCTO ===================== -->
+  <section class="producto" id="producto">
+    <div class="container">
+      <div class="producto__grid">
+        <div class="producto__image-col">
+          <!-- REEMPLAZA esta imagen con la foto real del producto -->
+          <div class="producto__img-placeholder">
+            <div class="placeholder-inner">
+              <span class="placeholder-icon">📦</span>
+              <p>Foto del producto</p>
+              <small>Reemplazar con imagen real</small>
+            </div>
+          </div>
+          <div class="producto__badge">Nuevo</div>
+        </div>
+        <div class="producto__info-col">
+          <span class="section-tag">Nuestro Producto</span>
+          <h2 class="section-title">SEA BAR<br /><em>Original</em></h2>
+          <p class="producto__desc">Una barrita energética única, elaborada con Ulva deshidratada del Pacífico peruano, combinada con ingredientes naturales que potencian su sabor y valor nutricional. Perfecta para el deporte, la oficina o cualquier momento del día.</p>
+          <ul class="producto__list">
+            <li>✦ Sin gluten</li>
+            <li>✦ Sin conservantes</li>
+            <li>✦ Fuente de proteína vegetal</li>
+            <li>✦ Energía de larga duración</li>
+          </ul>
+          <div class="producto__pricing">
+            <div class="precio">
+              <span class="precio__label">Unidad</span>
+              <span class="precio__num">S/ 4.50</span>
+            </div>
+            <div class="precio precio--promo">
+              <span class="precio__label">Pack x2</span>
+              <span class="precio__num">S/ 8.00</span>
+              <span class="precio__save">Ahorras S/1</span>
+            </div>
+          </div>
+          <a href="https://wa.me/51994928993?text=Hola,%20quiero%20pedir%20mis%20SEA%20BARs!" target="_blank" class="btn btn--primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Comprar por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- ORDER FORM -->
+      <div class="order-form-wrap" id="pedido">
+        <span class="section-tag">Pedido Directo</span>
+        <h3 class="order-form-wrap__title">¿Prefieres dejar tu pedido aquí?</h3>
+        <form class="order-form" id="orderForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Celular / WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="9XX XXX XXX" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cantidad">¿Qué deseas pedir?</label>
+            <select id="cantidad" name="cantidad">
+              <option value="1 unidad - S/4.50">1 unidad — S/ 4.50</option>
+              <option value="Pack x2 - S/8.00">Pack x2 — S/ 8.00</option>
+              <option value="Pack x5 - S/20.00">Pack x5 — S/ 20.00</option>
+              <option value="Pack x10 - S/38.00">Pack x10 — S/ 38.00</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje adicional (opcional)</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Dirección de entrega, consultas..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Enviar pedido por WhatsApp
+          </button>
+          <p class="form-note">Te contactaremos en menos de 2 horas 🕐</p>
+        </form>
+      </div>
     </div>
   </section>
+
+  <!-- ===================== TESTIMONIOS ===================== -->
+  <section class="testimonios" id="testimonios">
+    <div class="container">
+      <span class="section-tag">Lo que dicen</span>
+      <h2 class="section-title">Nuestros <em>clientes</em></h2>
+      <div class="testimonios__grid">
+
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">"Las llevo al gym todos los días. Me dan energía sin ese crash horrible de las barras artificiales. ¡Y saben bien! Increíble que sean de algas."</p>
+          <div class="testi-card__author">
+            <!-- REEMPLAZA con foto real del cliente -->
+            <div class="testi-avatar" style="background:#7FC7A6;">A</div>
+            <div>
+              <strong>Andrea M.</strong>
+              <span>Deportista amateur · Lima</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card testi-card--featured">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">"Empecé con el pack de 2 para probar y ahora pido 10 cada semana. Mi nutricionista quedó impresionada con los valores nutricionales. SEA BAR de verdad es diferente."</p>
+          <div class="testi-card__author">
+            <!-- REEMPLAZA con foto real del cliente -->
+            <div class="testi-avatar" style="background:#3E7F66;color:#F2EFE6;">C</div>
+            <div>
+              <strong>Carlos R.</strong>
+              <span>Instructor de yoga · Miraflores</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">"Me encanta que sea un producto peruano y sostenible. El sabor es suave, natural, nada artificial. Lo comparto en mis stories y mis seguidoras enloquecen."</p>
+          <div class="testi-card__author">
+            <!-- REEMPLAZA con foto real del cliente -->
+            <div class="testi-avatar" style="background:#1F4D3A;color:#F2EFE6;">V</div>
+            <div>
+              <strong>Valeria S.</strong>
+              <span>Influencer wellness · San Isidro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★☆</div>
+          <p class="testi-card__text">"Se las doy a mis hijos como merienda saludable. Al principio dudaban pero ahora ellos mismos las piden. La entrega fue súper rápida también."</p>
+          <div class="testi-card__author">
+            <!-- REEMPLAZA con foto real del cliente -->
+            <div class="testi-avatar" style="background:#7FC7A6;">M</div>
+            <div>
+              <strong>María T.</strong>
+              <span>Mamá · Surco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">"Trabajo en oficina y siempre necesito algo para las 3pm. Desde que descubrí SEA BAR deje el café de la tarde. Me ayuda a concentrarme sin ponerme ansioso."</p>
+          <div class="testi-card__author">
+            <!-- REEMPLAZA con foto real del cliente -->
+            <div class="testi-avatar" style="background:#3E7F66;color:#F2EFE6;">P</div>
+            <div>
+              <strong>Pablo G.</strong>
+              <span>Diseñador UX · Barranco</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-card__stars">★★★★★</div>
+          <p class="testi-card__text">"Las descubrí en la feria Eco Market y desde ese día no paro de pedirlas. El concepto de usar algas peruanas es brillante, y el sabor lo confirma."</p>
+          <div class="testi-card__author">
+            <!-- REEMPLAZA con foto real del cliente -->
+            <div class="testi-avatar" style="background:#1F4D3A;color:#F2EFE6;">L</div>
+            <div>
+              <strong>Luciana F.</strong>
+              <span>Nutricionista · San Borja</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EVENTOS / FERIAS ===================== -->
+  <section class="eventos" id="eventos">
+    <div class="container">
+      <span class="section-tag">Encuéntranos</span>
+      <h2 class="section-title">Eventos & <em>Ferias</em></h2>
+      <div class="eventos__grid">
+        <div class="eventos__past">
+          <h3 class="eventos__sub">Eventos pasados</h3>
+          <div class="ferias-grid">
+            <!-- REEMPLAZA con fotos reales de las ferias -->
+            <div class="feria-item">
+              <div class="feria-img feria-img--placeholder">
+                <span>📸</span>
+                <small>Foto feria — reemplazar</small>
+              </div>
+              <div class="feria-info">
+                <strong>Eco Market Lima</strong>
+                <span>Marzo 2025 · Miraflores</span>
+              </div>
+            </div>
+            <div class="feria-item">
+              <div class="feria-img feria-img--placeholder">
+                <span>📸</span>
+                <small>Foto feria — reemplazar</small>
+              </div>
+              <div class="feria-info">
+                <strong>Bioferia de Surquillo</strong>
+                <span>Abril 2025 · Surquillo</span>
+              </div>
+            </div>
+            <div class="feria-item">
+              <div class="feria-img feria-img--placeholder">
+                <span>📸</span>
+                <small>Foto feria — reemplazar</small>
+              </div>
+              <div class="feria-info">
+                <strong>Feria Gastronómica USIL</strong>
+                <span>Abril 2025 · San Isidro</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="eventos__upcoming">
+          <h3 class="eventos__sub">Próximos eventos</h3>
+          <div class="upcoming-list">
+            <!-- ACTUALIZA con los próximos eventos reales -->
+            <div class="upcoming-item">
+              <div class="upcoming-date">
+                <span class="upcoming-date__day">17</span>
+                <span class="upcoming-date__month">May</span>
+              </div>
+              <div class="upcoming-info">
+                <strong>Eco Market Lima</strong>
+                <p>Parque Reducto, Miraflores · 9am – 3pm</p>
+              </div>
+              <span class="upcoming-badge">Próximo</span>
+            </div>
+            <div class="upcoming-item">
+              <div class="upcoming-date">
+                <span class="upcoming-date__day">01</span>
+                <span class="upcoming-date__month">Jun</span>
+              </div>
+              <div class="upcoming-info">
+                <strong>Bioferia de Surquillo</strong>
+                <p>Av. Angamos, Surquillo · 8am – 2pm</p>
+              </div>
+              <span class="upcoming-badge">Confirmado</span>
+            </div>
+            <div class="upcoming-item upcoming-item--tbd">
+              <div class="upcoming-date">
+                <span class="upcoming-date__day">??</span>
+                <span class="upcoming-date__month">Jun</span>
+              </div>
+              <div class="upcoming-info">
+                <strong>Feria Ecológica PUCP</strong>
+                <p>Campus PUCP · Por confirmar</p>
+              </div>
+              <span class="upcoming-badge upcoming-badge--soon">Pronto</span>
+            </div>
+          </div>
+          <p class="eventos__note">🔔 Síguenos en Instagram para no perderte ningún evento</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="galeria" id="galeria">
+    <div class="container">
+      <span class="section-tag">Nuestra comunidad</span>
+      <h2 class="section-title"><em>Galería</em></h2>
+    </div>
+    <div class="galeria__grid">
+      <!-- REEMPLAZA cada div con una etiqueta <img src="tu-foto.jpg" alt="..."> -->
+      <div class="galeria__item galeria__item--tall" data-cat="producto">
+        <div class="galeria-placeholder"><span>📦</span><small>Foto producto</small></div>
+        <div class="galeria__overlay"><span>Producto</span></div>
+      </div>
+      <div class="galeria__item" data-cat="feria">
+        <div class="galeria-placeholder"><span>🎪</span><small>Foto feria</small></div>
+        <div class="galeria__overlay"><span>Feria</span></div>
+      </div>
+      <div class="galeria__item" data-cat="cliente">
+        <div class="galeria-placeholder"><span>😊</span><small>Foto cliente</small></div>
+        <div class="galeria__overlay"><span>Clientes</span></div>
+      </div>
+      <div class="galeria__item galeria__item--wide" data-cat="feria">
+        <div class="galeria-placeholder"><span>🌊</span><small>Foto feria/evento</small></div>
+        <div class="galeria__overlay"><span>Evento</span></div>
+      </div>
+      <div class="galeria__item" data-cat="producto">
+        <div class="galeria-placeholder"><span>🌿</span><small>Foto Ulva / ingredientes</small></div>
+        <div class="galeria__overlay"><span>Ingredientes</span></div>
+      </div>
+      <div class="galeria__item" data-cat="cliente">
+        <div class="galeria-placeholder"><span>💪</span><small>Foto cliente activo</small></div>
+        <div class="galeria__overlay"><span>Clientes</span></div>
+      </div>
+      <div class="galeria__item" data-cat="cliente">
+        <div class="galeria-placeholder"><span>🏃</span><small>Foto deportista</small></div>
+        <div class="galeria__overlay"><span>Deporte</span></div>
+      </div>
+      <div class="galeria__item" data-cat="producto">
+        <div class="galeria-placeholder"><span>✨</span><small>Foto producto detalle</small></div>
+        <div class="galeria__overlay"><span>Detalle</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SOCIAL / TRUST ===================== -->
+  <section class="social" id="social">
+    <div class="container">
+      <div class="social__grid">
+        <div class="social__insta">
+          <span class="section-tag">Síguenos</span>
+          <h2 class="section-title">Estamos en<br /><em>Instagram</em></h2>
+          <p>Únete a nuestra comunidad de amantes de la alimentación natural y marina. Recetas, consejos y descuentos exclusivos para seguidores.</p>
+          <!-- REEMPLAZA con tu usuario real de Instagram -->
+          <a href="https://instagram.com/seabar.pe" target="_blank" class="btn btn--outline">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @seabar.pe
+          </a>
+        </div>
+
+        <!-- SECCIÓN INFLUENCERS — Reemplaza con datos reales -->
+        <div class="social__influencers">
+          <h3 class="social__sub">Nos recomiendan</h3>
+          <div class="influencers-grid">
+            <div class="influencer-card">
+              <!-- REEMPLAZA con foto real del influencer -->
+              <div class="influencer-avatar">
+                <span>👤</span>
+              </div>
+              <div class="influencer-info">
+                <strong>@Nombre_influencer</strong>
+                <span>Wellness &amp; Lifestyle</span>
+                <a href="#" target="_blank" class="influencer-link">Ver post</a>
+              </div>
+            </div>
+            <div class="influencer-card">
+              <!-- REEMPLAZA con foto real del influencer -->
+              <div class="influencer-avatar">
+                <span>👤</span>
+              </div>
+              <div class="influencer-info">
+                <strong>@Nutricionista_peru</strong>
+                <span>Nutrición &amp; Salud</span>
+                <a href="#" target="_blank" class="influencer-link">Ver post</a>
+              </div>
+            </div>
+            <div class="influencer-card">
+              <!-- REEMPLAZA con foto real del influencer -->
+              <div class="influencer-avatar">
+                <span>👤</span>
+              </div>
+              <div class="influencer-info">
+                <strong>@Fitness_Lima</strong>
+                <span>Deporte &amp; Entrenamiento</span>
+                <a href="#" target="_blank" class="influencer-link">Ver post</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section class="contacto" id="contacto">
+    <div class="contacto__wave-top"></div>
+    <div class="container">
+      <span class="section-tag" style="color:#7FC7A6;">Contáctanos</span>
+      <h2 class="section-title" style="color:#F2EFE6;">Hablemos del<br /><em>mar</em></h2>
+      <p class="contacto__sub">Estamos aquí para responder tus dudas, tomar tu pedido o simplemente charlar sobre alimentación natural.</p>
+      <div class="contacto__options">
+        <a href="https://wa.me/51994928993?text=Hola,%20tengo%20una%20consulta%20sobre%20SEA%20BAR" target="_blank" class="contacto-card">
+          <div class="contacto-card__icon" style="background:#25D366;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div>
+            <strong>WhatsApp</strong>
+            <span>+51 994 928 993</span>
+          </div>
+        </a>
+        <!-- REEMPLAZA con tu usuario real de Instagram -->
+        <a href="https://instagram.com/seabar.pe" target="_blank" class="contacto-card">
+          <div class="contacto-card__icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div>
+            <strong>Instagram</strong>
+            <span>@seabar.pe</span>
+          </div>
+        </a>
+        <div class="contacto-card">
+          <div class="contacto-card__icon" style="background:#3E7F66;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <strong>Lima, Perú</strong>
+            <span>Delivery a toda Lima</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <span class="footer__logo">SEA BAR</span>
+          <p>Energía del mar peruano.<br />Hecho con amor y Ulva 🌿</p>
+        </div>
+        <nav class="footer__nav">
+          <a href="#ulva">Ulva</a>
+          <a href="#producto">Producto</a>
+          <a href="#testimonios">Testimonios</a>
+          <a href="#eventos">Eventos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="footer__social">
+          <a href="https://wa.me/51994928993" target="_blank" aria-label="WhatsApp">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <!-- REEMPLAZA con tu usuario real de Instagram -->
+          <a href="https://instagram.com/seabar.pe" target="_blank" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 SEA BAR · Startup peruana · Hecho con 🌊 en Lima</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/51994928993?text=Hola,%20quiero%20pedir%20mis%20SEA%20BARs!" target="_blank" class="float-wa" aria-label="Contáctanos por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
 </html>
-
