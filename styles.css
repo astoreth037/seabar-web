@@ -92,17 +92,17 @@ body.clicking #cur-dot  { width: 5px;  height: 5px; }
   display: grid; grid-template-columns: 55% 45%;
   align-items: center; gap: 32px; padding: 90px 52px 60px;
 }
-/* PARALLAX BEACH BACKGROUND */
+/* PARALLAX BEACH BACKGROUND - real photo via Unsplash */
 .hero-bg {
-  position: absolute; inset: -60px; z-index: 0;
+  position: absolute; inset: -80px -10px; z-index: 0;
   background:
     linear-gradient(to bottom,
-      rgba(31,77,58,.55) 0%,
-      rgba(31,77,58,.3) 40%,
-      rgba(31,77,58,.5) 100%),
-    url('beach.jpg') center/cover no-repeat;
+      rgba(10,40,25,.45) 0%,
+      rgba(10,40,25,.2) 45%,
+      rgba(10,40,25,.55) 100%),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800&q=80') center/cover no-repeat;
   will-change: transform;
-  transition: none;
+  transform-origin: center top;
 }
 .hero-overlay {
   position: absolute; inset: 0; z-index: 1;
