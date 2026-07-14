@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900">
+  <!-- Sky gradient -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87CEEB"/>
+      <stop offset="40%" stop-color="#B0E0E6"/>
+      <stop offset="100%" stop-color="#E0F4F8"/>
+    </linearGradient>
+    <linearGradient id="ocean" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B7EC2"/>
+      <stop offset="50%" stop-color="#2E9DB5"/>
+      <stop offset="100%" stop-color="#3EB8A8"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5DEB3"/>
+      <stop offset="100%" stop-color="#DEB887"/>
+    </linearGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  <!-- Sky -->
+  <rect width="1440" height="900" fill="url(#sky)"/>
+  <!-- Clouds -->
+  <g opacity="0.85" filter="url(#blur1)">
+    <ellipse cx="200" cy="120" rx="90" ry="35" fill="white" opacity="0.9"/>
+    <ellipse cx="160" cy="130" rx="60" ry="28" fill="white" opacity="0.9"/>
+    <ellipse cx="250" cy="128" rx="65" ry="26" fill="white" opacity="0.9"/>
+    <ellipse cx="700" cy="80" rx="110" ry="38" fill="white" opacity="0.8"/>
+    <ellipse cx="660" cy="92" rx="70" ry="30" fill="white" opacity="0.8"/>
+    <ellipse cx="760" cy="88" rx="75" ry="28" fill="white" opacity="0.8"/>
+    <ellipse cx="1200" cy="100" rx="95" ry="32" fill="white" opacity="0.75"/>
+    <ellipse cx="1160" cy="112" rx="65" ry="25" fill="white" opacity="0.75"/>
+    <ellipse cx="1260" cy="108" rx="70" ry="27" fill="white" opacity="0.75"/>
+  </g>
+  <!-- Sun -->
+  <circle cx="1100" cy="140" r="60" fill="#FFE87C" opacity="0.9"/>
+  <circle cx="1100" cy="140" r="80" fill="#FFE87C" opacity="0.2"/>
+  <!-- Distant mountains / hills -->
+  <path d="M0,450 Q180,350 360,420 Q540,350 720,400 Q900,340 1080,390 Q1260,340 1440,380 L1440,900 L0,900Z" fill="#2A8A5A" opacity="0.4"/>
+  <!-- Ocean -->
+  <path d="M0,520 Q240,490 480,510 Q720,530 960,500 Q1200,470 1440,495 L1440,900 L0,900Z" fill="url(#ocean)"/>
+  <!-- Wave 1 -->
+  <path d="M-40,540 Q180,510 400,535 Q620,560 840,530 Q1060,500 1280,525 Q1380,535 1480,520" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
+  <!-- Wave 2 -->
+  <path d="M-40,565 Q200,542 420,558 Q640,574 860,552 Q1080,530 1300,548 Q1400,555 1480,545" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"/>
+  <!-- Wave foam -->
+  <path d="M0,580 Q360,562 720,578 Q1080,594 1440,576 L1440,590 Q1080,608 720,592 Q360,576 0,594Z" fill="rgba(255,255,255,0.25)"/>
+  <!-- Sand -->
+  <path d="M0,640 Q360,600 720,620 Q1080,640 1440,610 L1440,900 L0,900Z" fill="url(#sand)"/>
+  <!-- Wet sand reflection -->
+  <path d="M0,640 Q360,600 720,620 Q1080,640 1440,610 L1440,660 Q1080,695 720,675 Q360,655 0,680Z" fill="rgba(100,160,200,0.18)"/>
+  <!-- Palm tree left -->
+  <g transform="translate(80,320)">
+    <rect x="-8" y="0" width="16" height="280" rx="8" fill="#6B4C2A" transform="rotate(-8,0,280)"/>
+    <ellipse cx="-30" cy="-10" rx="70" ry="22" fill="#2E7D32" transform="rotate(-30,-30,-10)"/>
+    <ellipse cx="30" cy="-15" rx="68" ry="20" fill="#388E3C" transform="rotate(25,30,-15)"/>
+    <ellipse cx="0" cy="-35" rx="60" ry="18" fill="#43A047" transform="rotate(-10,0,-35)"/>
+    <ellipse cx="-50" cy="20" rx="55" ry="16" fill="#2E7D32" transform="rotate(-50,-50,20)"/>
+    <ellipse cx="55" cy="15" rx="58" ry="16" fill="#388E3C" transform="rotate(45,55,15)"/>
+  </g>
+  <!-- Palm tree right -->
+  <g transform="translate(1350,280)">
+    <rect x="-8" y="0" width="16" height="300" rx="8" fill="#6B4C2A" transform="rotate(6,0,300)"/>
+    <ellipse cx="30" cy="-10" rx="72" ry="22" fill="#2E7D32" transform="rotate(30,30,-10)"/>
+    <ellipse cx="-32" cy="-18" rx="66" ry="20" fill="#388E3C" transform="rotate(-28,-32,-18)"/>
+    <ellipse cx="0" cy="-38" rx="58" ry="18" fill="#43A047" transform="rotate(8,0,-38)"/>
+    <ellipse cx="52" cy="22" rx="54" ry="15" fill="#2E7D32" transform="rotate(52,52,22)"/>
+    <ellipse cx="-58" cy="18" rx="56" ry="15" fill="#388E3C" transform="rotate(-48,-58,18)"/>
+  </g>
+  <!-- Seagulls -->
+  <g fill="none" stroke="#555" stroke-width="2.5" opacity="0.7">
+    <path d="M300,180 Q315,170 330,180"/>
+    <path d="M318,172 Q333,162 348,172"/>
+    <path d="M900,150 Q918,138 936,150"/>
+    <path d="M940,165 Q955,155 970,165"/>
+    <path d="M620,200 Q635,190 650,200"/>
+  </g>
+  <!-- Footprints in sand -->
+  <g fill="#C4A882" opacity="0.5">
+    <ellipse cx="600" cy="780" rx="8" ry="12" transform="rotate(10,600,780)"/>
+    <ellipse cx="620" cy="800" rx="8" ry="12" transform="rotate(-5,620,800)"/>
+    <ellipse cx="640" cy="775" rx="8" ry="12" transform="rotate(8,640,775)"/>
+    <ellipse cx="660" cy="798" rx="8" ry="12" transform="rotate(-8,660,798)"/>
+    <ellipse cx="680" cy="772" rx="8" ry="12" transform="rotate(12,680,772)"/>
+  </g>
+  <!-- Small shell -->
+  <path d="M450,750 Q460,740 475,748 Q480,760 465,762 Q450,758 450,750Z" fill="#F0D090" opacity="0.7"/>
+</svg>
